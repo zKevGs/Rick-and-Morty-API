@@ -84,7 +84,7 @@ function mostrarPersonajes(personajes){
         <img src="${personaje.image}" alt="${personaje.name}"/>
         <h2>👤${personaje.name}</h2>
         <p>💀status: ${personaje.status}</p>
-        <a href="/pages/detalles.html?id=${personaje.id}">Ver detalles</a>
+        <a href="../pages/detalles.html?id=${personaje.id}">Ver detalles</a>
         `;
         contenedor.appendChild(card);
 
