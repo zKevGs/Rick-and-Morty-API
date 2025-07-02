@@ -1,0 +1,18 @@
+/* clases generales para ahorrar codigo repetitivo */
+
+:root {
+  --fondo-general: #121212;
+  --celeste-rick: #9AD9EA;
+  --verde-portal: #39FF14;
+  ---verde-apagado: #2ecc71;
+  --amarillo-morty: #FFEB3B;
+  --azul-rick: #007ACC;
+   --negro-espacio: #000010;
+  --gris-texto: #ccc;
+  --fuente-titulo: 'Orbitron', sans-serif;
+  --fuente-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --negro: #121212;
+  ---blanco: #f0f0f0;
+  ---16px:16px;
+  ---8px: 8px;
+}

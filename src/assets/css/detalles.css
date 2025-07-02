@@ -1,0 +1,111 @@
+@import url(./style.css);
+
+body {
+   margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at center, #001022 0%, var(--negro-espacio) 80%);
+
+  font-family: var(--fuente-texto);
+  color: var(--gris-texto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* header */
+
+h1{
+    align-items: center;
+}
+
+/* main background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    100px 50px white,
+    150px 200px white,
+    230px 350px white,
+    300px 100px white,
+    400px 400px white,
+    500px 250px white,
+    600px 450px white,
+    700px 150px white,
+    800px 300px white,
+    900px 200px white,
+    1000px 350px white,
+    1100px 100px white,
+    1200px 400px white,
+    1300px 250px white,
+    1400px 150px white,
+    200px 500px white,
+    300px 600px white,
+    400px 550px white,
+    500px 650px white,
+    600px 600px white,
+    700px 700px white,
+    800px 650px white,
+    900px 600px white,
+    1000px 700px white,
+    1100px 650px white,
+    1200px 600px white,
+    1300px 700px white,
+    1400px 650px white,
+    100px 700px white,
+    200px 800px white,
+    300px 750px white,
+    400px 800px white,
+    500px 750px white,
+    600px 800px white,
+    700px 750px white,
+    800px 800px white,
+    900px 750px white,
+    1000px 800px white,
+    1100px 750px white,
+    1200px 800px white,
+    1300px 750px white,
+    1400px 800px white,
+    50px 850px white,
+    150px 900px white,
+    250px 850px white,
+    350px 900px white,
+    450px 850px white;
+  animation: parallax 10s linear infinite;
+}
+
+@keyframes parallax {
+  from { transform: translateY(0); }
+  to { transform: translateY(-100px); }
+}
+
+/* footer */
+
+/* botones */
+
+ a {
+  background-color: var(--verde-portal);
+  color: #000;
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: var(---8px);
+  box-shadow: 0 0 10px var(--verde-portal);
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+ a:hover {
+  background-color: var(--azul-rick);
+  color: #fff;
+  box-shadow: 0 0 12px var(--azul-rick);
+}
+
+

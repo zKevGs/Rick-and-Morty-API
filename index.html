@@ -1,0 +1,38 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Rick y Morty App</title>
+    <link rel="stylesheet" href="./src/assets/css/index.css" />
+    <link rel="shortcut icon" href="./src/assets/img/icono final.png" type="image/x-icon">
+  </head>
+  <body>
+    <header>
+      <h1>Rick y Morty personajes</h1> <!-- titulo principal -->
+      <div id="filtros"> <!-- filtrado de busqueda -->
+        <input type="text" id="inputBusqueda" placeholder="Buscar personaje..." />
+      <select id="filtro">
+        <option value="">Todos los estados</option>
+        <option value="alive">Vivo</option>
+        <option value="dead">Muerto</option>
+        <option value="unknown">Desconocido</option>
+      </select>
+<!--       <button id="Ordenamiento">Ordenar A-Z</button> -->
+      </div>
+    </header>
+    <main>
+      <div id="contenedorPersonajes"></div> <!-- todos los personajes -->
+ </main>
+ <footer>
+  <p id="paginaActual"></p> <!-- muestra el numero de página -->
+      <div id="paginacion"> <!-- me permite moverme entre páginas -->
+  <button id="btnPrev" disabled>Anterior</button>
+  <button id="btnSig" disabled>Siguiente</button>
+      </div>
+ </footer>
+    <script type="module" src="./src/js/main.js"></script>
+  </body>
+</html>
+

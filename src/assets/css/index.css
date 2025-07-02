@@ -1,0 +1,221 @@
+@import url(./style.css);
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--fondo-general);
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+/* header */
+
+/* titulo */
+
+h1{
+  display: flex;
+  justify-content: center;
+  color: var(--amarillo-morty);
+}
+
+/* filtrado */
+
+#filtros{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  color: var(--celeste-rick);
+}
+#filtros input,
+#filtros select {
+  padding: var(---8px);
+  border: 2px solid var(--verde-portal);
+  border-radius: var(---8px);
+  background-color: var(--celeste-rick);
+  color: var(--negro);
+  font-size: 15px;
+  margin: var(---16px);
+}
+
+/* para el input placeholder */
+#filtros input::placeholder {
+  color: var(--negro);
+  opacity: 0.7;
+}
+
+#filtros input:focus,
+#filtros select:focus {
+  outline: none;
+  border-color: var(--amarillo-morty);
+}
+
+/* main */
+
+/* Contenedor general de personajes */
+#contenedorPersonajes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* cards */
+#contenedorPersonajes div {
+  background-color: var(--celeste-rick);
+  color: var(--negro);
+  border: 2px solid var(--verde-portal);
+  border-radius: 1rem;
+  padding: var(---16px);
+  margin: var(---16px);
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+#contenedorPersonajes div:hover {
+  transform: scale(1.02);
+}
+
+/* Títulos */
+
+#contenedorPersonajes div h2 {
+  color: var(--amarillo-morty);
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Estado */
+
+#contenedorPersonajes div p {
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+/* Botón "Ver detalles" */
+
+#contenedorPersonajes div a {
+ background-color: var(--azul-rick);
+  color: #000;
+  font-family: var(--fuente-titulo);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: var(---8px);
+  box-shadow: 0 0 10px var(--verde-portal);
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+#contenedorPersonajes div a:hover {
+ background-color: var(--verde-portal);
+  color: #fff;
+  box-shadow: 0 0 12px var(--azul-rick);
+}
+
+/* main background */
+
+body::before {
+  content: ""; /* hace que el elemento exista */
+  position: fixed; /* para que se vea en toda la pantalla */
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 0; /* lo dejo de "fondo" */
+  pointer-events: none; /* para no poder hacer clicks en las "estrellas" */
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow: /* "estrellas" */
+    100px 50px white,
+    150px 200px white,
+    230px 350px white,
+    300px 100px white,
+    400px 400px white,
+    500px 250px white,
+    600px 450px white,
+    700px 150px white,
+    800px 300px white,
+    900px 200px white,
+    1000px 350px white,
+    1100px 100px white,
+    1200px 400px white,
+    1300px 250px white,
+    1400px 150px white,
+    200px 500px white,
+    300px 600px white,
+    400px 550px white,
+    500px 650px white,
+    600px 600px white,
+    700px 700px white,
+    800px 650px white,
+    900px 600px white,
+    1000px 700px white,
+    1100px 650px white,
+    1200px 600px white,
+    1300px 700px white,
+    1400px 650px white,
+    100px 700px white,
+    200px 800px white,
+    300px 750px white,
+    400px 800px white,
+    500px 750px white,
+    600px 800px white,
+    700px 750px white,
+    800px 800px white,
+    900px 750px white,
+    1000px 800px white,
+    1100px 750px white,
+    1200px 800px white,
+    1300px 750px white,
+    1400px 800px white,
+    50px 850px white,
+    150px 900px white,
+    250px 850px white,
+    350px 900px white,
+    450px 850px white;
+  animation: parallax 10s linear infinite;
+}
+/* movimiento de "estrellas" */
+
+@keyframes parallax {
+  from { transform: translateY(0); } 
+  to { transform: translateY(-100px); }
+}
+
+/* footer */
+
+/* Paginación */
+
+#paginacion {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+#paginaActual {
+  color: var(---blanco);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Botones paginación */
+
+button {
+  border-radius: var(---8px);
+  border: 1px solid transparent;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--verde-portal);
+  color: var(--negro);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+button:hover {
+  background-color: var(---verde-apagado);
+  color: var(---blanco);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
