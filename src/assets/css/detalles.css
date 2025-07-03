@@ -108,4 +108,18 @@ body::before {
   box-shadow: 0 0 12px var(--azul-rick);
 }
 
+/* responsive */
 
+@media screen and (max-width: 768px) {
+
+  .titulo{
+    display: flex;
+    justify-content: center;
+  }
+
+  #filtros{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}

@@ -1,6 +1,3 @@
-console.log("Script para la página detalles");
-
-
 const params = new URLSearchParams(window.location.search); //tomo la URL
 const id = params.get("id");//agarro lo que me interesa de la url, en este caso el ID para mostrar los detalles de este PJ
 const contenedor = document.getElementById("detallesPersonaje");

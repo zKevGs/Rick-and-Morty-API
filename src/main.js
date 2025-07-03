@@ -1,6 +1,3 @@
-console.log("Script para la página principal");
-
-
 // URL de la api
 // document.getElementById('contenedorPersonajes')
 

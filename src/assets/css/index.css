@@ -219,3 +219,20 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
+
+
+/* responsive */
+
+@media screen and (max-width: 768px) {
+
+  .titulo{
+    display: flex;
+    justify-content: center;
+  }
+
+  #filtros{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
