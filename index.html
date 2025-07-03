@@ -4,6 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rick y Morty App</title>
     <link rel="stylesheet" href="/src/assets/css/index.css" />
     <link rel="shortcut icon" href="/src/assets/img/icono final.png" type="image/x-icon">
@@ -13,6 +14,13 @@
      <a id="inicio" href="index.html">
        <h1 class="titulo">Rick y Morty personajes</h1> <!-- titulo principal -->
      </a>
+
+     <!-- loader -->
+    <div id="loader" style="display: none;">
+    <p>Cargando...</p>
+    </div>
+
+
       <div id="filtros"> <!-- filtrado de busqueda -->
         <input type="text" id="inputBusqueda" placeholder="Buscar personaje..." />
       <select id="filtro">
@@ -21,6 +29,7 @@
         <option value="dead">Muerto</option>
         <option value="unknown">Desconocido</option>
       </select>
+      <a href="episodes.html" id="VerEpisodios">Ver episodios</a>
 <!--       <button id="Ordenamiento">Ordenar A-Z</button> -->
       </div>
     </header>

@@ -5,7 +5,7 @@ const contenedor = document.getElementById("detallesPersonaje");
 
 async function obtenerDetallePersonaje(id) {
 
-      contenedor.innerHTML = `<p>Cargando...</p>`; // mostramos el loader
+mostrarLoader();
 
       try{
 
@@ -37,6 +37,15 @@ async function obtenerDetallePersonaje(id) {
    }catch(error){
           contenedor.innerHTML = `<p>error al mostrar los personajes. ${error.message}</p>` //manejo errores
    }
+   finally{ocultarLoader();}
+}
+
+function mostrarLoader() {
+  document.getElementById("loader").style.display = "block";
+}
+
+function ocultarLoader() {
+  document.getElementById("loader").style.display = "none";
 }
 
 //inicializo

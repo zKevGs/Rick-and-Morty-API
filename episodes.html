@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episodes</title>
+    <link rel="stylesheet" href="/src/assets/css/episodios.css">
+    <link rel="shortcut icon" href="/src/assets/img/icono final.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!-- TITULO PRINCIPAL -->
+        <h1>Rick y Morty Episodios</h1>
+
+        <a href="/index.html">Volver al inicio</a>
+
+        <!-- loader -->
+        <div id="loader" style="display: none;">
+            <p>Cargando...</p>
+        </div>
+    </header>
+    <main>
+        <div id="titulo"></div>
+        <div id="Episodios"></div>
+    </main>
+    <footer>
+          <p id="paginaActual"></p> <!-- muestra el numero de página -->
+      <div id="paginacion"> <!-- me permite moverme entre páginas -->
+  <button id="btnPrev" disabled>Anterior</button>
+  <button id="btnSig" disabled>Siguiente</button>
+      </div>
+    </footer>
+    <script src="/src/episodios.js"></script>
+</body>
+</html>

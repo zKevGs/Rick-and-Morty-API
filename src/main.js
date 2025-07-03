@@ -33,8 +33,7 @@ const paginaActual = document.getElementById("paginaActual");
 
 async function buscarPersonajes(url) {
 
-      contenedor.innerHTML = `<p>Cargando...</p>`; // mostramos el loader
-
+  mostrarLoader();
       try{
 
         const response = await fetch(url); //hago la peticion http y hago la promise
@@ -64,6 +63,7 @@ async function buscarPersonajes(url) {
     catch(error){
       contenedor.innerHTML = `<p>error al mostrar los Personajes. ${error.message}</p>`
     }
+    finally{ocultarLoader();}
 }
 
 //function mostrarpersonajes(personajes)
@@ -74,7 +74,7 @@ async function buscarPersonajes(url) {
 //agrego el hijo al elemento padre
 
 function mostrarPersonajes(personajes){
-    contenedor.innerHTML = "" //limpio antes de renderizar
+    contenedor.innerHTML = ""; //limpio antes de renderizar
 
 
     personajes.forEach(personaje => { //recorro los personajes
@@ -116,6 +116,15 @@ function obtenerNumeroPagina(url) {
 }
 
 
+function mostrarLoader() {
+  document.getElementById("loader").style.display = "block";
+}
+
+function ocultarLoader() {
+  document.getElementById("loader").style.display = "none";
+}
+
+
 
 /* eventos */
 
@@ -124,7 +133,22 @@ function obtenerNumeroPagina(url) {
 busqueda.addEventListener("keyup", actualizarBusqueda);
 filtro.addEventListener("change", actualizarBusqueda);
 
+//paginacion
+prev.addEventListener("click", () => {buscarPersonajes(prevPag)});
+sig.addEventListener("click", () => {buscarPersonajes(sigPag)});
+
+//inicializamos
+actualizarBusqueda();
+
+
+
+
+
+
+
+
 /* ordenamiento */
+
 //intenté hacer este ordenamiento, pero al cargarme los datos de la api no podia ordenarlos de la A-Z
 //y viceversa, ya que esta solo me mostrama los datos filtrados de la pagina cargada, no me filtraba
 //todas las paginas como yo quería. Y estuve investigando pero no encontré alguna funcion de la API
@@ -148,13 +172,6 @@ function ordenarpersonajes(){
 }
 
 buttom.addEventListener("click", ordenarpersonajes); */
-
-//paginacion
-prev.addEventListener("click", () => {buscarPersonajes(prevPag)});
-sig.addEventListener("click", () => {buscarPersonajes(sigPag)});
-
-//inicializamos
-actualizarBusqueda();
 
 //cual es la mejor manera de que el codigo se vea mejor? de la forma que aplique ahora(todo junto y ordenado)
 //o que cada listener este cerca de la funcion que usa, cada getelement cerca de la funcion que lo va a utilizar, etc

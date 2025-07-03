@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         detalles: resolve(__dirname, 'detalles.html'),
+        episodes: resolve(__dirname, 'episodes.html'),
       }
     }
   }

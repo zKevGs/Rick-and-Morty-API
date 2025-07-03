@@ -11,6 +11,28 @@ body {
 
 /* header */
 
+/* boton de arriba de ver episodios */
+#VerEpisodios {
+  background-color: var(--verde-portal); /* verde brillante */
+  color: var(--negro);
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: var(---16px);
+  border-radius: var(---8px);
+  text-decoration: none;
+  text-align: center;
+  font-family: var(--fuente-texto);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  max-height: 20px;
+}
+
+#VerEpisodios:hover {
+  background-color: var(---verde-apagado); /* verde un poco más oscuro al hover */
+  color: white;
+}
+
 /* titulo */
 
 h1{
@@ -184,7 +206,7 @@ body::before {
 /* movimiento de "estrellas" */
 
 @keyframes parallax {
-  from { transform: translateY(0); } 
+  from { transform: translateY(0); }
   to { transform: translateY(-100px); }
 }
 
@@ -225,8 +247,37 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* loader */
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  z-index: 9999;
+}
+
+
 
 /* responsive */
+
+@media (min-width: 768px) and (max-width:1024px) {
+    .titulo{
+      display: flex;
+      justify-content: center;
+    }
+      #filtros{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
 
